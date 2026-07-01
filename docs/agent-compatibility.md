@@ -1,24 +1,39 @@
 # Compatibilidad con agentes
 
+## Codex
+
+Codex lee `AGENTS.md` y descubre skills repo-scoped en `.agents/skills/`.
+
+Skills disponibles:
+
+```text
+$role-creator
+$use-role
+```
+
+Ver `docs/using-with-codex.md`.
+
+## Claude Code
+
+Claude Code lee `CLAUDE.md` y descubre skills de proyecto en `.claude/skills/`.
+
+Skills disponibles:
+
+```text
+/role-creator
+/use-role
+```
+
+Ver `docs/using-with-claude-code.md`.
+
 ## Cualquier LLM
 
-Usar `PROMPT.md`.
+Usar `PROMPT.md` dentro de cada rol.
 
-## Agentes compatibles con Agent Skills
+## Agent Skills
 
-Usar `SKILL.md` dentro de cada paquete de rol.
-
-## Codex y agentes de codigo
-
-Usar `AGENTS.md` para entender el repositorio y los scripts.
+Cada rol incluye su propio `SKILL.md` para mantener un formato de workflow compatible con el estandar de skills, pero las skills que activan el sistema desde Codex/Claude son las de `.agents/skills/` y `.claude/skills/`.
 
 ## MCP futuro
 
-El repositorio esta preparado para exponer roles como:
-
-- Recursos: archivos y referencias.
-- Prompts: prompts standalone.
-- Herramientas: crear, validar, exportar y actualizar roles.
-
-No hay servidor MCP incluido todavia porque la prioridad de esta primera version es que el repositorio funcione sin servicios externos.
-
+El formato `role.yaml` + `PROMPT.md` + `references/` permite exponer roles como recursos/prompts en un servidor MCP futuro.

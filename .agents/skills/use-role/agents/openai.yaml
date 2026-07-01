@@ -1,0 +1,4 @@
+interface:
+  display_name: Use Role
+  short_description: Aplica un rol experto guardado.
+  default_prompt: Usa este rol del repositorio:
