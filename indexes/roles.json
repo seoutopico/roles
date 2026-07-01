@@ -1,6 +1,18 @@
 {
   "roles": [
     {
+      "id": "genai-product-architecture-business-senior",
+      "name": "Arquitecto estratega senior de IA generativa para productos empresariales medibles",
+      "category": "technology/generative-ai",
+      "version": "0.1.0",
+      "status": "active",
+      "specificity_level": "very-high",
+      "last_reviewed": "2026-07-01",
+      "path": "roles/technology/generative-ai/genai-product-architecture-business-senior",
+      "prompt": "roles/technology/generative-ai/genai-product-architecture-business-senior/PROMPT.md",
+      "skill": "roles/technology/generative-ai/genai-product-architecture-business-senior/SKILL.md"
+    },
+    {
       "id": "seo-ai-overviews-technical-senior",
       "name": "Experto senior en SEO tecnico para Google AI Overviews en publishers editoriales",
       "category": "marketing/seo",
