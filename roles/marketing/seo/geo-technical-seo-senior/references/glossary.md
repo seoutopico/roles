@@ -1,0 +1,24 @@
+# Glosario
+
+- AI Overviews: funcion de Google Search que genera una respuesta resumida con enlaces de apoyo cuando Google estima que aporta valor sobre la busqueda clasica.
+- AI Mode: experiencia de Google Search orientada a respuestas generativas, comparaciones, razonamiento y exploracion con enlaces de apoyo.
+- GEO: Generative Engine Optimization. Practicas para mejorar visibilidad, inclusion, mencion o citacion en respuestas de sistemas generativos. No es una garantia ni sustituye el SEO tecnico.
+- AEO: Answer Engine Optimization. Optimizacion para respuestas directas, featured snippets, preguntas y otros formatos extractivos o conversacionales.
+- LLMO: Large Language Model Optimization. Termino amplio para optimizar presencia y representacion en modelos de lenguaje y asistentes. Puede solaparse con GEO.
+- Retrieval: fase en la que un sistema busca documentos o pasajes candidatos antes de generar una respuesta.
+- Reranking: fase que reordena candidatos recuperados segun relevancia, calidad, diversidad, freshness u otros criterios.
+- Citation: referencia visible a una fuente dentro de una respuesta generativa o AI answer.
+- Grounding query: query interna usada por un sistema para recuperar contenido que fundamenta una respuesta; no tiene por que coincidir con la query exacta del usuario.
+- Query fan-out: tecnica en la que un sistema genera multiples subconsultas o variantes para cubrir facetas de una tarea compleja.
+- Query augmentation: transformacion de una query mediante expansion, reescritura, traduccion, canonicalizacion, desambiguacion o generacion de variantes.
+- Ghost citation: situacion en la que una fuente parece participar en grounding o ser relevante, pero no aparece como cita visible o no recibe trafico; puede deberse a seleccion, acceso tecnico, renderizado o controles de snippet.
+- Snippet eligibility: capacidad de una pagina para aparecer con fragmentos en resultados de busqueda o respuestas AI, condicionada por indexacion, contenido visible y controles como nosnippet o max-snippet.
+- OAI-SearchBot: crawler de OpenAI para surfacing en funciones de busqueda de ChatGPT. Se controla de forma independiente de GPTBot.
+- GPTBot: crawler de OpenAI asociado a contenido que puede usarse para entrenamiento de modelos fundacionales, segun la documentacion de OpenAI.
+- ChatGPT-User: user agent usado en acciones iniciadas por usuarios de ChatGPT o Custom GPTs; no equivale al crawler automatico de search.
+- Google-Extended: control de Google para ciertos usos en otros sistemas de IA de Google; no es el control principal de aparicion en Google Search AI features.
+- data-nosnippet: atributo HTML para excluir partes concretas del contenido de snippets o previews compatibles, sin necesariamente impedir indexacion del resto.
+- max-snippet: directiva que limita la longitud maxima del snippet textual.
+- IndexNow: protocolo para notificar cambios de URL a motores participantes, especialmente util para freshness en Bing y ecosistemas compatibles.
+- Entity SEO: trabajo para que una marca, persona, producto o concepto sea identificable, desambiguado y consistente en fuentes propias y externas.
+- Selection Rate Optimization: enfoque de industria orientado a mejorar la probabilidad de que un sistema generativo seleccione una fuente o pasaje entre candidatos.
