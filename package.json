@@ -1,0 +1,16 @@
+{
+  "name": "roles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Banco agnostico de roles expertos para agentes de IA.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-roles.mjs",
+    "index": "node scripts/build-index.mjs",
+    "export:example": "node scripts/export-role.mjs roles/marketing/seo/seo-ai-overviews-technical-senior"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+

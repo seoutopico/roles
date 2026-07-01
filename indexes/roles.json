@@ -1,0 +1,16 @@
+{
+  "roles": [
+    {
+      "id": "seo-ai-overviews-technical-senior",
+      "name": "Experto senior en SEO tecnico para Google AI Overviews en publishers editoriales",
+      "category": "marketing/seo",
+      "version": "0.1.0",
+      "status": "active",
+      "specificity_level": "very-high",
+      "last_reviewed": "2026-07-01",
+      "path": "roles/marketing/seo/seo-ai-overviews-technical-senior",
+      "prompt": "roles/marketing/seo/seo-ai-overviews-technical-senior/PROMPT.md",
+      "skill": "roles/marketing/seo/seo-ai-overviews-technical-senior/SKILL.md"
+    }
+  ]
+}

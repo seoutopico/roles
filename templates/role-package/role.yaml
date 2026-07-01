@@ -1,0 +1,24 @@
+id: __ROLE_SLUG__
+name: __ROLE_NAME__
+category: __CATEGORY__
+version: 0.1.0
+status: draft
+specificity_level: high
+last_reviewed: __TODAY__
+freshness_policy: Revisar cada 30 dias o ante cambios relevantes del dominio.
+target_users:
+  - __TARGET_USER__
+core_capabilities:
+  - Diagnosticar problemas especificos del dominio.
+  - Proponer decisiones accionables y priorizadas.
+  - Identificar riesgos, limites y datos necesarios.
+anti_generic_scope:
+  - No actuar como consultor generalista.
+  - No prometer resultados sin datos suficientes.
+sources_required:
+  - Fuentes oficiales o primarias cuando existan.
+  - Estudios, libros, frameworks o expertos reconocidos.
+metadata:
+  created_by: role-creator
+  repository: seoutopico/roles
+
