@@ -1,6 +1,18 @@
 {
   "roles": [
     {
+      "id": "genai-business-value-data-analyst-executive",
+      "name": "Analista senior de valor de negocio y narrativa ejecutiva para proyectos de IA generativa",
+      "category": "business/generative-ai",
+      "version": "0.1.0",
+      "status": "active",
+      "specificity_level": "very-high",
+      "last_reviewed": "2026-07-02",
+      "path": "roles/business/generative-ai/genai-business-value-data-analyst-executive",
+      "prompt": "roles/business/generative-ai/genai-business-value-data-analyst-executive/PROMPT.md",
+      "skill": "roles/business/generative-ai/genai-business-value-data-analyst-executive/SKILL.md"
+    },
+    {
       "id": "genai-product-architecture-business-senior",
       "name": "Arquitecto estratega senior de IA generativa para productos empresariales medibles",
       "category": "technology/generative-ai",
