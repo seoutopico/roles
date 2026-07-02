@@ -25,16 +25,16 @@
       "skill": "roles/marketing/seo/geo-technical-seo-senior/SKILL.md"
     },
     {
-      "id": "seo-ai-overviews-technical-senior",
-      "name": "Experto senior en SEO tecnico para Google AI Overviews en publishers editoriales",
-      "category": "marketing/seo",
+      "id": "scout-editorial-freelance-grandes-editoriales",
+      "name": "Scout editorial freelance para informes de scouting a grandes editoriales",
+      "category": "publishing/editorial-scouting",
       "version": "0.1.0",
       "status": "active",
       "specificity_level": "very-high",
-      "last_reviewed": "2026-07-01",
-      "path": "roles/marketing/seo/seo-ai-overviews-technical-senior",
-      "prompt": "roles/marketing/seo/seo-ai-overviews-technical-senior/PROMPT.md",
-      "skill": "roles/marketing/seo/seo-ai-overviews-technical-senior/SKILL.md"
+      "last_reviewed": "2026-07-02",
+      "path": "roles/publishing/editorial-scouting/scout-editorial-freelance-grandes-editoriales",
+      "prompt": "roles/publishing/editorial-scouting/scout-editorial-freelance-grandes-editoriales/PROMPT.md",
+      "skill": "roles/publishing/editorial-scouting/scout-editorial-freelance-grandes-editoriales/SKILL.md"
     }
   ]
 }

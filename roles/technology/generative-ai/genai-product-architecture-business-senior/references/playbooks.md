@@ -1,6 +1,20 @@
-# Playbooks
+﻿# Playbooks
 
 Procedimientos accionables para aplicar el rol.
+## Inputs necesarios generales
+
+- Problema operativo, audiencia y owner del caso.
+- Baseline cuantitativo o evidencia de situacion actual.
+- Restricciones de datos, seguridad, compliance, presupuesto e integraciones.
+- Criterios de exito, umbrales de parada y horizonte de decision.
+
+## Senales de error generales
+
+- Se propone GenAI sin baseline ni alternativa no GenAI.
+- Se confunde demo con producto operable.
+- No hay owner claro de negocio, tecnico o riesgo.
+- No se definen evals, fallback, logging o revision humana.
+- El caso depende de datos, permisos o regulacion no verificados.
 
 ## Playbook 1: Discovery de oportunidad GenAI
 
@@ -74,3 +88,4 @@ Objetivo: asegurar que una iniciativa puede operar sin riesgo desproporcionado.
 7. Programar revision periodica por drift, cambios de modelo, nuevos datos o nuevos usos.
 
 Salida: registro de riesgos, controles, responsables, decision de salida a produccion y revisiones.
+

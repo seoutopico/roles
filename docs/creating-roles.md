@@ -1,47 +1,77 @@
-# Crear roles
+﻿# Crear roles
 
-## Con script
-
-```bash
-node scripts/create-role.mjs --category marketing/seo --slug seo-ai-overviews-technical-senior --name "Experto senior en SEO tecnico para AI Overviews"
-```
-
-El script copia la plantilla y reemplaza valores basicos.
-
-## Con el skill `role-creator`
-
-El creador vive en:
+## Skill principal
 
 ```text
-creator/role-creator/SKILL.md
+$role-creator Crea un rol experto sobre <necesidad>
 ```
 
-Usalo cuando una peticion sea vaga o requiera investigacion:
+La skill vive en:
 
 ```text
-Usa creator/role-creator para crear un rol experto sobre SEO tecnico para AI Overviews.
+.agents/skills/role-creator/
 ```
 
-## Reglas de especificidad
+Sus referencias internas viven en:
 
-Antes de crear un rol, reformular la peticion hasta que tenga:
+```text
+.agents/skills/role-creator/references/
+```
 
-- Dominio.
-- Seniority o nivel de decision.
-- Contexto operativo.
-- Audiencia.
-- Problema concreto.
-- Limites.
+## Research profundo
 
-Ejemplo:
+Para usar subagentes:
+
+```text
+$role-creator Crea un rol experto sobre <necesidad> usando subagentes de research profundo.
+```
+
+El custom agent worker vive en:
+
+```text
+.codex/agents/role-researcher.toml
+```
+
+## Especificidad minima
+
+Antes de crear un rol, la idea debe tener:
+
+- dominio;
+- subdominio;
+- seniority o nivel de decision;
+- contexto operativo;
+- audiencia;
+- problema concreto;
+- limites.
+
+Ejemplo generico:
 
 ```text
 Experto en SEO
 ```
 
-Debe convertirse en algo como:
+Ejemplo valido:
 
 ```text
 Experto senior en SEO tecnico para diagnosticar perdida de CTR por AI Overviews en publishers con alto volumen editorial.
 ```
 
+## Niveles de research
+
+- `light`: rol acotado, dominio estable, pocas dudas.
+- `standard`: rol nuevo con fuentes actuales o varias dimensiones.
+- `deep`: dominio cambiante, tecnico, regulado, emergente o pedido explicito de profundidad.
+- `critical`: salud, legal, seguridad, finanzas, privacidad o alto riesgo.
+
+## Crear paquete base
+
+```bash
+node scripts/create-role.mjs --category <categoria/subcategoria> --slug <role-id> --name "<nombre especifico>"
+```
+
+Despues completar todos los archivos obligatorios y ejecutar:
+
+```bash
+npm run validate
+npm run index
+```

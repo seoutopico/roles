@@ -8,7 +8,7 @@
     "validate": "node scripts/validate-roles.mjs",
     "index": "node scripts/build-index.mjs",
     "resolve": "node scripts/resolve-role.mjs",
-    "export:example": "node scripts/export-role.mjs roles/marketing/seo/seo-ai-overviews-technical-senior"
+    "export:example": "node scripts/export-role.mjs roles/marketing/seo/geo-technical-seo-senior"
   },
   "engines": {
     "node": ">=18"

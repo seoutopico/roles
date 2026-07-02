@@ -14,8 +14,8 @@ El usuario puede dar un `role-id`, una ruta o una descripcion parcial.
 Ejemplos:
 
 ```text
-seo-ai-overviews-technical-senior
-roles/marketing/seo/seo-ai-overviews-technical-senior
+geo-technical-seo-senior
+roles/marketing/seo/geo-technical-seo-senior
 rol de AI Overviews
 ```
 

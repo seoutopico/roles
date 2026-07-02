@@ -1,40 +1,61 @@
 # Arquitectura
 
-El repositorio usa un modelo de paquete de rol.
+Este repositorio es agnostico para agentes y LLMs. Usa un contrato universal de paquetes de rol y, cuando estan disponibles, superficies especificas para agentes compatibles.
 
-## Capas
+## Superficies
 
-1. Capa canonica: `role.yaml`
-   - Metadatos estructurados.
-   - Sirve para indices, validadores, busquedas y futuros servidores MCP.
+```text
+AGENTS.md
+.agents/skills/
+.codex/agents/
+roles/
+scripts/
+templates/
+schemas/
+docs/
+```
 
-2. Capa operativa: `SKILL.md`
-   - Compatible con Agent Skills.
-   - Se carga cuando un agente compatible necesita ese rol.
+## Responsabilidades
 
-3. Capa portable: `PROMPT.md`
-   - Prompt standalone.
-   - Sirve para copiar y pegar en cualquier LLM.
+`AGENTS.md` es el router principal para cualquier LLM o agente que entre al repositorio. Debe contener suficiente pipeline para trabajar sin depender de una superficie concreta.
 
-4. Capa de conocimiento: `references/`
-   - Fuentes, frameworks, glosario, bibliografia y playbooks.
+`.agents/skills/` contiene workflows invocables para entornos compatibles con skills:
 
-5. Capa de verificacion: `evals/`
-   - Casos y rubrica para comprobar si el rol responde con la calidad esperada.
+- `$role-creator`: crear, investigar, actualizar y validar roles.
+- `$use-role`: aplicar roles existentes.
 
-## Por que no solo SKILL.md
+`.codex/agents/` contiene workers opcionales para entornos que soporten subagentes:
 
-`SKILL.md` es bueno para agentes compatibles con skills, pero no todos los clientes lo soportan. Tambien es un formato orientado a ejecucion, no a gobierno del repositorio. `role.yaml` permite validar, indexar, filtrar y actualizar roles de forma automatica.
+- `role-researcher`: worker de research profundo.
 
-## Por que no solo PROMPT.md
+`roles/` contiene los productos finales versionados.
 
-Un prompt standalone es portable, pero pierde metadatos, fuentes, evaluaciones y estructura. Sirve para consumo, no para mantenimiento a escala.
+`scripts/` contiene operaciones deterministas: crear paquete, resolver rol, validar, indexar y exportar.
 
-## Compatibilidad futura
+## Paquete de rol
 
-El modelo esta preparado para exponer roles mediante MCP:
+Cada rol vive en:
 
-- `resources`: archivos del rol.
-- `prompts`: `PROMPT.md` o variantes generadas.
-- `tools`: creador, validador y actualizador de roles.
+```text
+roles/<categoria>/<subcategoria>/<role-id>/
+```
 
+Debe contener:
+
+```text
+role.yaml
+SKILL.md
+PROMPT.md
+references/sources.md
+references/frameworks.md
+references/bibliography.md
+references/glossary.md
+references/playbooks.md
+evals/cases.md
+evals/rubric.md
+CHANGELOG.md
+```
+
+## Regla de arquitectura
+
+No crear capas intermedias para workflows. Si un agente compatible debe invocarlo como skill, vive en `.agents/skills`. Si debe lanzarse como worker o subagente, vive en `.codex/agents`. Si es resultado final, vive en `roles/`.

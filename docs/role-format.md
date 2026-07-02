@@ -3,7 +3,7 @@
 Un rol vive en:
 
 ```text
-roles/<categoria>/<role-slug>/
+roles/<categoria>/<subcategoria>/<role-id>/
 ```
 
 ## Archivos obligatorios
@@ -23,8 +23,8 @@ roles/<categoria>/<role-slug>/
 ## Campos minimos de role.yaml
 
 ```yaml
-id: seo-ai-overviews-technical-senior
-name: Experto senior en SEO tecnico para AI Overviews
+id: geo-technical-seo-senior
+name: Consultor senior en SEO tecnico y GEO para visibilidad en buscadores generativos
 category: marketing/seo
 version: 0.1.0
 status: draft

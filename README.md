@@ -1,25 +1,24 @@
 # Roles
 
-Banco de roles expertos vivos para agentes de IA, preparado para Codex y Claude Code.
+Banco agnostico de roles expertos vivos para agentes de IA.
 
-Este repositorio no es una app ni una coleccion de prompts sueltos. Es un sistema para crear, versionar, validar, mantener y usar paquetes de roles expertos.
+No es una app ni una coleccion de prompts sueltos. Es un sistema para crear, versionar, validar, mantener y usar paquetes de roles expertos.
 
-## Uso rapido con Codex
-
-Abrir Codex en la raiz del repositorio.
-
-Codex usa:
+## Superficies
 
 ```text
 AGENTS.md
 .agents/skills/role-creator/SKILL.md
 .agents/skills/use-role/SKILL.md
+.codex/agents/role-researcher.toml
 ```
+
+## Uso rapido
 
 Usar un rol:
 
 ```text
-$use-role seo-ai-overviews-technical-senior
+$use-role <role-id>
 Analiza este caso: <caso>
 ```
 
@@ -29,48 +28,22 @@ Crear un rol:
 $role-creator Crea un rol experto sobre <necesidad>
 ```
 
-Actualizar un rol:
+Crear con research profundo:
 
 ```text
-$role-creator Actualiza el rol seo-ai-overviews-technical-senior con fuentes actuales y mejora sus evals si hace falta.
-```
-
-## Uso rapido con Claude Code
-
-Abrir Claude Code en la raiz del repositorio.
-
-Claude usa:
-
-```text
-CLAUDE.md
-.claude/skills/role-creator/SKILL.md
-.claude/skills/use-role/SKILL.md
-```
-
-Usar un rol:
-
-```text
-/use-role seo-ai-overviews-technical-senior
-Analiza este caso: <caso>
-```
-
-Crear un rol:
-
-```text
-/role-creator Crea un rol experto sobre <necesidad>
+$role-creator Crea un rol experto sobre <necesidad> usando subagentes de research profundo.
 ```
 
 ## Estructura
 
 ```text
-AGENTS.md                         # Instrucciones persistentes para Codex
-CLAUDE.md                         # Instrucciones persistentes para Claude Code
-.agents/skills/                   # Skills reales para Codex
-.claude/skills/                   # Skills reales para Claude Code
-creator/role-creator/             # Material compartido del creador de roles
-roles/                            # Banco de roles
-schemas/                          # Contratos JSON
+AGENTS.md                         # Router principal para cualquier LLM o agente
+.agents/skills/                   # Skills invocables si el entorno las soporta
+.codex/agents/                    # Workers opcionales para subagentes compatibles
+roles/                            # Paquetes de roles
 scripts/                          # Utilidades deterministas
+templates/                        # Plantillas de paquetes
+schemas/                          # Contratos estructurados
 docs/                             # Documentacion
 ```
 
@@ -88,53 +61,10 @@ roles/<categoria>/<subcategoria>/<role-id>/
 
 ## Comandos
 
-Resolver un rol:
-
 ```bash
-npm run resolve -- seo-ai-overviews-technical-senior
-```
-
-Validar:
-
-```bash
+npm run resolve -- <role-id-o-texto>
 npm run validate
-```
-
-Regenerar indice:
-
-```bash
 npm run index
-```
-
-Crear paquete base:
-
-```bash
-node scripts/create-role.mjs --category marketing/seo --slug seo-ai-overviews-technical-senior --name "Experto senior en SEO tecnico para AI Overviews"
-```
-
-Exportar prompt standalone:
-
-```bash
-node scripts/export-role.mjs roles/marketing/seo/seo-ai-overviews-technical-senior
-```
-
-## Rol inicial
-
-```text
-seo-ai-overviews-technical-senior
-roles/marketing/seo/seo-ai-overviews-technical-senior
-```
-
-## GitHub
-
-Remoto configurado:
-
-```text
-https://github.com/seoutopico/roles.git
-```
-
-Subir:
-
-```bash
-git push -u origin main
+node scripts/create-role.mjs --category marketing/seo --slug geo-technical-seo-senior --name "Consultor senior en SEO tecnico y GEO para visibilidad en buscadores generativos"
+node scripts/export-role.mjs roles/<categoria>/<subcategoria>/<role-id>
 ```

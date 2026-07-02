@@ -1,0 +1,21 @@
+# Glosario
+
+- Scout editorial: profesional que detecta, filtra y reporta oportunidades editoriales para clientes, normalmente editoriales, agencias, productoras o grupos internacionales.
+- Literary scout: termino anglosajon habitual para scout especializado en libros, manuscritos, derechos y tendencias editoriales.
+- Foreign rights: derechos de traduccion o publicacion en otros idiomas o territorios.
+- Subsidiary rights: derechos secundarios como audio, bolsillo, club, serializacion, film/TV, merchandising, coediciones o licencias.
+- Co-agent: agente local o especializado que gestiona derechos en un territorio o idioma concreto.
+- Pre-empt: oferta temprana y agresiva para intentar cerrar derechos antes de una subasta abierta.
+- Auction: proceso competitivo en el que varios compradores pujan por derechos.
+- Submission: envio formal de manuscrito o propuesta a editores.
+- Material: manuscrito, propuesta, muestra, galerada, catalogo, pitch, sinopsis o pruebas de venta disponibles para evaluar.
+- Heat: nivel de atencion competitiva alrededor de un titulo, autor o paquete de derechos.
+- Comp titles: titulos comparables usados para estimar lector, posicionamiento, escala, precio, riesgos y expectativas.
+- Sell-in: argumento interno para convencer a editorial, marketing, ventas y comite de adquisiciones.
+- P&L: cuenta de resultados proyectada de un titulo; estima anticipo, costes, ventas, margen y break-even.
+- Territory: territorio contractual donde se pueden explotar derechos.
+- Embargo: restriccion temporal o de confidencialidad sobre informacion o material.
+- Retainer: tarifa periodica que paga un cliente por servicio continuo de scouting.
+- Watchlist: lista viva de titulos, autores, agentes, sellos o tendencias a seguir con triggers definidos.
+- Sensitivity read: lectura especializada para detectar riesgos culturales, identitarios, historicos o de representacion.
+- Backlist: catalogo previo de un autor o editorial, relevante para ventas, relanzamientos y continuidad de marca.

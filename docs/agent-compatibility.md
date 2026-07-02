@@ -1,8 +1,12 @@
-# Compatibilidad con agentes
+﻿# Compatibilidad Codex
 
-## Codex
+## Skills
 
-Codex lee `AGENTS.md` y descubre skills repo-scoped en `.agents/skills/`.
+Codex descubre workflows repo-scoped en:
+
+```text
+.agents/skills/
+```
 
 Skills disponibles:
 
@@ -11,28 +15,25 @@ $role-creator
 $use-role
 ```
 
-Ver `docs/using-with-codex.md`.
+## Custom agents
 
-## Claude Code
-
-Claude Code lee `CLAUDE.md` y descubre skills de proyecto en `.claude/skills/`.
-
-Skills disponibles:
+Codex descubre custom agents de proyecto en:
 
 ```text
-/role-creator
-/use-role
+.codex/agents/
 ```
 
-Ver `docs/using-with-claude-code.md`.
+Custom agent disponible:
 
-## Cualquier LLM
+```text
+role-researcher
+```
 
-Usar `PROMPT.md` dentro de cada rol.
+`role-researcher` es un worker de investigacion. No crea roles finales y no edita archivos salvo instruccion explicita. Produce dossiers para que `$role-creator` sintetice evidencia, frameworks, playbooks, gaps y evals.
 
-## Agent Skills
+## Roles
 
-Cada rol incluye su propio `SKILL.md` para mantener un formato de workflow compatible con el estandar de skills, pero las skills que activan el sistema desde Codex/Claude son las de `.agents/skills/` y `.claude/skills/`.
+Cada rol incluye su propio `SKILL.md` como workflow operativo del rol. Las skills que activan el sistema del repositorio son solo las de `.agents/skills/`.
 
 ## MCP futuro
 

@@ -4,7 +4,7 @@ import { exists, parseSimpleYaml, readText, writeText } from "./lib.mjs";
 
 const roleDir = process.argv[2];
 if (!roleDir) {
-  console.error("Usage: node scripts/export-role.mjs roles/<category>/<role-slug>");
+  console.error("Usage: node scripts/export-role.mjs roles/<category>/<subcategory>/<role-id>");
   process.exit(1);
 }
 

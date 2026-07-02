@@ -1,67 +1,56 @@
-# Usar con Codex
+﻿# Usar con Codex
 
-Codex debe abrirse desde la raiz del repositorio.
+Abrir Codex desde la raiz del repositorio.
 
-## Lo que Codex carga
-
-Codex usa dos superficies:
+## Superficies
 
 ```text
 AGENTS.md
 .agents/skills/
+.codex/agents/
 ```
 
-`AGENTS.md` da las reglas persistentes del repositorio. Las skills reales estan en:
+Skills:
 
 ```text
-.agents/skills/role-creator/SKILL.md
-.agents/skills/use-role/SKILL.md
+$role-creator
+$use-role
 ```
+
+Custom agent:
+
+```text
+role-researcher
+```
+
+Si `role-researcher` no aparece en una sesion ya abierta, reiniciar Codex desde la raiz del repositorio.
 
 ## Usar un rol existente
 
-Prompt recomendado:
-
 ```text
-$use-role seo-ai-overviews-technical-senior
+$use-role <role-id>
 Analiza este caso: <caso>
 ```
 
-El flujo esperado es:
-
-1. Ejecutar `npm run resolve -- seo-ai-overviews-technical-senior`.
-2. Leer `role.yaml`, `SKILL.md` y `PROMPT.md` del rol.
-3. Leer referencias si hacen falta.
-4. Responder como el rol.
-
 ## Crear un rol
-
-Prompt recomendado:
 
 ```text
 $role-creator Crea un rol experto sobre <necesidad>
 ```
 
-El flujo esperado es:
-
-1. Concretar la necesidad.
-2. Investigar si el dominio cambia.
-3. Crear paquete con `scripts/create-role.mjs`.
-4. Completar todos los archivos.
-5. Ejecutar `npm run validate` y `npm run index`.
-
-## Actualizar un rol
-
-Prompt recomendado:
+## Crear con research profundo
 
 ```text
-$role-creator Actualiza el rol seo-ai-overviews-technical-senior con fuentes actuales y nuevos casos de evaluacion.
+$role-creator Crea un rol experto sobre <necesidad> usando subagentes de research profundo.
 ```
 
-## Probar que Codex tiene una ruta clara
+En este caso `$role-creator` puede lanzar workers `role-researcher` por carriles. El worker no crea roles; devuelve dossiers de research.
+
+## Verificacion
 
 ```bash
-npm run resolve -- seo-ai-overviews-technical-senior
 npm run validate
 npm run index
 ```
+
+Si `npm run index` refleja cambios ajenos al trabajo actual, separarlos antes de cerrar.
